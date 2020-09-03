@@ -1,0 +1,6 @@
+[submodule "mixins"]
+	path = mixins
+	url = https://github.com/Areskul/mixins.git
+[submodule "scss"]
+	path = scss
+	url = https://github.com/Areskul/scss.git
