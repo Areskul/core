@@ -1,5 +1,5 @@
 <template>
-  <b-switch v-model="isDark">Dark Mode</b-switch>
+  <b-switch v-model="isDark" type="is-success">Dark Mode</b-switch>
 </template>
 <script>
 import Vue from "vue";

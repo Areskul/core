@@ -2,48 +2,46 @@
   <transition mode="out-in" enter-active-class="fade-in-fwd" leave-active-class="fade-out-bck">
     <card v-show="show" class="floating" color="bg" text="ternary" elevation="4" rounded>
       Ceci est un menu
-      <nav>
-        <p v-for="link in nav" :key="link.name">{{ link.name }}</p>
-      </nav>
+      <slot />
       <switcher />
     </card>
   </transition>
 </template>
 <script>
 import card from "./card";
-import switcher from "./switcher"
+import switcher from "./switcher";
 export default {
   props: {
     show: Boolean,
     in: String,
-    out: String,
+    out: String
     // nav: Array
   },
   data: () => ({
     nav: [
       { route: "/Home", name: "Accueil" },
-      { route: "/Cart", name: "Panier" },
-    ],
+      { route: "/Cart", name: "Panier" }
+    ]
   }),
   computed: {
-    isVisible: function () {
+    isVisible: function() {
       return this.show;
-    },
+    }
   },
   components: {
     card,
-    switcher,
+    switcher
   },
   watch: {
     show() {
       console.log(this.show);
-    },
+    }
   },
   methods: {
-    debug: function () {
+    debug: function() {
       console.log(this.show);
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>
