@@ -1,17 +1,6 @@
 <template>
-  <transition
-    mode="out-in"
-    enter-active-class="fade-in-fwd"
-    leave-active-class="fade-out-bck"
-  >
-    <card
-      v-show="show"
-      class="floating"
-      color="bg"
-      text="ternary"
-      elevation="4"
-      rounded
-    >
+  <transition mode="out-in" enter-active-class="fade-in-fwd" leave-active-class="fade-out-bck">
+    <card v-show="show" class="floating" color="bg" text="ternary" elevation="4" rounded>
       Ceci est un menu
       <slot />
       <switcher />
@@ -21,41 +10,36 @@
 <script>
 import card from "./card";
 import switcher from "./switcher";
+import { position } from "@/core/mixins/position";
 export default {
+  mixins: [position],
   props: {
     show: Boolean,
     in: String,
-    out: String,
+    out: String
     // nav: Array
   },
   data: () => ({
     nav: [
       { route: "/Home", name: "Accueil" },
-      { route: "/Cart", name: "Panier" },
-    ],
+      { route: "/Cart", name: "Panier" }
+    ]
   }),
   computed: {
     isVisible: function() {
       return this.show;
-    },
+    }
   },
   components: {
     card,
-    switcher,
-  },
-  methods: {
-    debug: function() {
-      console.log(this.show);
-    },
-  },
+    switcher
+  }
 };
 </script>
 <style scoped>
 .floating {
-  position: absolute;
+  position: fixed;
   /* float: unset; */
-  top: 70px;
-  right: 20px;
   z-index: 1;
   display: inline-block;
   white-space: nowrap;
