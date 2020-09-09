@@ -3,9 +3,9 @@
 </template>
 <script>
 import Vue from "vue";
-import { metaTheme, theme } from "@/core/mixins/theme.js";
+import { metaTheme, theme } from "../../mixins/theme.js";
 export default Vue.extend({
   name: "switcher",
-  mixins: [metaTheme, theme]
+  mixins: [metaTheme, theme],
 });
 </script>

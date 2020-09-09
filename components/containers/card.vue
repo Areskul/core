@@ -5,11 +5,9 @@
 </template>
 <script>
 import Vue from "vue";
-import { styles } from "@/core/mixins/styles.js";
+import { styles } from "../../mixins/styles.js";
 export default Vue.extend({
   name: "card",
-  mixins: [styles]
+  mixins: [styles],
 });
 </script>
-<style>
-</style>
