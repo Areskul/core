@@ -1,13 +1,13 @@
 <template>
-  <div class="px-0">
+  <div>
     <slot></slot>
   </div>
 </template>
 <script>
 import Vue from "vue";
-import { styles } from "../../mixins/styles.js";
+import { color, elevation, border, dimension } from "../../mixins/style.js";
 export default Vue.extend({
   name: "card",
-  mixins: [styles],
+  mixins: [color, elevation, border, dimension]
 });
 </script>

@@ -1,25 +1,41 @@
-# core (Must have minimal files)
+# Core (Must have Vue.js minimal files)
 
 ## What is it ?
 
-It's a folder that contains vitals components to create a reactive website.
+It's a folder that contains vitals mixins, scss, directives
+and components to create a reactive website.
+It's modular. Import just what you need.
 
-- **Mixins** that brings easy components customization powered by
-- **SCSS** for fast theming
-- And ready for use customizable **components** made with those mixins.
+- **SCSS** for a set of custom properties (variables).
 
-## What it contains:
+For Vue.js usage:
 
-- header
-- footer
+- **Mixins** for easy component customisation with SCSS custom properties.
+- **Directives** for must have reactivity
+
+- And some ready for use customizable **components**
+
+## What it contains
+
+- SCSS functions
+- Mixins to inject in your components (colors ,shape, shades)
+- Directives (scroll)
 
 ## How to use ?
 
-### Mixins and Components
+You may import only the part you need:
 
-**Clone it** in your _root_ or _src_ folder.
-Import whatever you want Mixins or Components in your project.
+First import the scss you need.
+Folow these [instructions](https://github.com/Areskul/scss#Scss)
 
-### SCSS
+Then import the mixins you need.
+Folow these [instructions](https://github.com/Areskul/mixins#Mixins)
 
-Make a scss/variables.scss file in your root folder and define your color palette.
+```javascript
+import { color, elevation, border } from "core/mixins/styles";
+export default {
+  mixins: [color, elevation, border],
+};
+```
+
+Then import the directives you need.
