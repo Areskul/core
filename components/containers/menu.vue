@@ -10,9 +10,9 @@
 <script>
 import card from "./card";
 import switcher from "../buttons/switcher";
-import { position } from "../../mixins/grid";
+// import { position } from "../../mixins/grid";
 export default {
-  mixins: [position],
+  // mixins: [position],
   props: {
     show: Boolean,
     in: String,
