@@ -1,6 +1,6 @@
 export const scroll = {
-  inserted: function(el: HTMLElement, binding: any) {
-    const f = function(evt: Event) {
+  inserted: function (el: HTMLElement, binding: any) {
+    const f = function (evt: Event) {
       if (binding.value(evt, el)) {
         window.removeEventListener("scroll", f);
       }
