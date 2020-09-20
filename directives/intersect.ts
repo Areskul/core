@@ -25,12 +25,14 @@ function parseIntersectValue(value: any) {
     : Object.assign({}, defaultConfig, value);
 }
 
-export const intersect = function inserted(el: HTMLElement, { value }: any) {
-  const config = parseIntersectValue(value);
+export const intersect = {
+  inserted: function(el: HTMLElement, { value }: any) {
+    const config = parseIntersectValue(value);
 
-  const observer = new IntersectionObserver(([entry]) => {
-    config.callback(entry);
-  }, except(config, ["callback"]));
+    const observer = new IntersectionObserver(([entry]) => {
+      config.callback(entry);
+    }, except(config, ["callback"]));
 
-  observer.observe(el);
+    observer.observe(el);
+  },
 };
