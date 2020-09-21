@@ -1,11 +1,13 @@
 
+//keen ui outside click
+
 export function on(event, target, callback, options = { passive: true }) {
     target.addEventListener(event, callback, options);
 
     return () => {
         target.removeEventListener(event, callback, options);
     };
-}
+};
 
 // eslint-disable-next-line max-params
 function onKey(key, event, target, callback, options) {
@@ -18,21 +20,19 @@ function onKey(key, event, target, callback, options) {
             callback(e);
         }
     }, options);
-}
+};
 
 export function onKeydown(keys, target, callback, options) {
     return onKey(keys, 'keydown', target, callback, options);
-}
+};
 
 export function onKeyup(keys, target, callback, options) {
     return onKey(keys, 'keyup', target, callback, options);
-}
+};
 
 export function onKeypress(keys, target, callback, options) {
     return onKey(keys, 'keypress', target, callback, options);
-}
-
-
+};
 
 addExternalClickListener(elements = [this.$el], callback = null, options = { passive: true }) {
     elements = Array.isArray(elements) ? elements : [elements];
@@ -50,8 +50,7 @@ addExternalClickListener(elements = [this.$el], callback = null, options = { pas
             this.$emit('external-click', e);
         }
     }, options);
-}
-
+};
 removeExternalClickListener() {
     if (this.destroyExternalClickListener) {
         this.destroyExternalClickListener();
