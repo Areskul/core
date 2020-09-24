@@ -1,6 +1,8 @@
-import { scroll } from "./scroll";
-export { scroll };
+import { onScroll } from "./onScroll";
+export { onScroll };
 import { intersect } from "./intersect";
 export { intersect };
-// import { outsideClick } from "./outsideClick";
-// export { outsideClick };
+import { clickOutSide } from "./clickOutSide";
+export { clickOutSide };
+import { scrollTo } from "./scrollTo";
+export { scrollTo };
