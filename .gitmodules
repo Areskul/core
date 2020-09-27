@@ -4,3 +4,12 @@
 [submodule "scss"]
 	path = scss
 	url = https://github.com/Areskul/scss.git
+[submodule "minimal-border"]
+	path = scss
+	url = https://github.com/Areskul/minimal-border.git
+[submodule "minimal-elevation"]
+	path = scss
+	url = https://github.com/Areskul/minimal-elevation.git
+[submodule "minimal-palette"]
+	path = scss
+	url = https://github.com/Areskul/minimal-palette.git
