@@ -5,10 +5,11 @@
 </template>
 <script>
 import Vue from "vue";
-import { elevation, border, dimension } from "../../mixins/style.js";
-import { color } from "@areskul/palette/palette.js";
+import { border, dimension } from "../../mixins/style";
+import { color, text } from "@areskul/palette/palette";
+import { elevation } from "@areskul/elevation/elevation";
 export default Vue.extend({
   name: "card",
-  mixins: [color, elevation, border, dimension],
+  mixins: [color, text, elevation, border, dimension],
 });
 </script>
