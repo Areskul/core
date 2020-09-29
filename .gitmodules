@@ -13,3 +13,6 @@
 [submodule "minimal-palette"]
 	path = minimal-palette
 	url = https://github.com/Areskul/minimal-palette.git
+[submodule "minimal-grid"]
+	path = minimal-grid
+	url = https://github.com/Areskul/minimal-grid.git
