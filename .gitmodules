@@ -16,3 +16,6 @@
 [submodule "minimal-grid"]
 	path = minimal-grid
 	url = https://github.com/Areskul/minimal-grid.git
+[submodule "minimal-dimension"]
+	path = minimal-dimension
+	url = https://github.com/Areskul/minimal-dimension.git
