@@ -1,17 +1,20 @@
 <template>
-  <div v-scroll="handleScroll" class="sticky-header" :class="[elevate ? 'shadow' : 'no-shadow' ]">
+  <div
+    v-scroll="handleScroll"
+    class="sticky-header"
+    :class="[elevate ? 'shadow' : 'no-shadow']"
+  >
     <slot></slot>
   </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
+export default {
   name: "v-header",
   data: () => ({
     elevate: false,
   }),
   methods: {
-    handleScroll: function (evt: Event) {
+    handleScroll: function(evt: Event) {
       if (window.scrollY >= 50) {
         this.elevate = true;
       } else {
@@ -19,7 +22,7 @@ export default Vue.extend({
       }
     },
   },
-});
+};
 </script>
 
 <style lang="scss">
