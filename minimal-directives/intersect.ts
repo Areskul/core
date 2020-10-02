@@ -25,10 +25,23 @@ function parseIntersectValue(value: any) {
     : Object.assign({}, defaultConfig, value);
 }
 
-export const intersect = {
-  inserted: function(el: HTMLElement, { value }: any) {
-    const config = parseIntersectValue(value);
+// Vue 2
+// export const intersect = {
+//   inserted: function(el: HTMLElement, { value }: any) {
+//     const config = parseIntersectValue(value);
 
+//     const observer = new IntersectionObserver(([entry]) => {
+//       config.callback(entry);
+//     }, except(config, ["callback"]));
+
+//     observer.observe(el);
+//   },
+// };
+
+// Vue3
+export const intersect = {
+  mounted: function(el: HTMLElement, { value }: any) {
+    const config = parseIntersectValue(value);
     const observer = new IntersectionObserver(([entry]) => {
       config.callback(entry);
     }, except(config, ["callback"]));
