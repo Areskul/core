@@ -26,22 +26,10 @@ function parseIntersectValue(value: any) {
 }
 
 // Vue 2
-// export const intersect = {
-//   inserted: function(el: HTMLElement, { value }: any) {
-//     const config = parseIntersectValue(value);
-
-//     const observer = new IntersectionObserver(([entry]) => {
-//       config.callback(entry);
-//     }, except(config, ["callback"]));
-
-//     observer.observe(el);
-//   },
-// };
-
-// Vue3
 export const intersect = {
-  mounted: function(el: HTMLElement, { value }: any) {
+  inserted: function(el: HTMLElement, { value }: any) {
     const config = parseIntersectValue(value);
+
     const observer = new IntersectionObserver(([entry]) => {
       config.callback(entry);
     }, except(config, ["callback"]));
@@ -49,3 +37,15 @@ export const intersect = {
     observer.observe(el);
   },
 };
+
+// Vue3
+// export const intersect = {
+//   mounted: function(el: HTMLElement, { value }: any) {
+//     const config = parseIntersectValue(value);
+//     const observer = new IntersectionObserver(([entry]) => {
+//       config.callback(entry);
+//     }, except(config, ["callback"]));
+
+//     observer.observe(el);
+//   },
+// };
