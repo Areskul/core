@@ -19,3 +19,6 @@
 [submodule "minimal-dimension"]
 	path = minimal-dimension
 	url = https://github.com/Areskul/minimal-dimension.git
+[submodule "minimal-transition"]
+	path = minimal-transition
+	url = https://github.com/Areskul/minimal-transition.git
